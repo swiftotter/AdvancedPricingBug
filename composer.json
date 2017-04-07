@@ -6,13 +6,16 @@
         "magento/framework": "100.1.*"
     },
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": [
         "GNU-3.0"
     ],
     "autoload": {
         "files": [
             "registration.php"
-        ]
+        ],
+        "psr-4": {
+          "SwiftOtter\\AdvancedPricingBug\\": ""
+        }
     }
 }
