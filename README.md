@@ -12,5 +12,22 @@ The solution is inspired from:
 This is super simple:
 
 ```
-composer install swiftotter/advanced-pricing-bug
+composer require swiftotter/advanced-pricing-bug
+php bin/magento module:enable swiftotter/advanced-pricing-bug
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy
+php bin/magento cache:clean
+php bin/magento cache:flush
+php bin/magento indexer:reindex
+```
+
+## If you encounter "Invalid Form Key" Error while saving products
+add this line in your .ini file
+```
+max_input_vars=10000
+```
+or put this in your index.php file
+```
+ini_set("max_input_vars",10000);
 ```
