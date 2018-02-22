@@ -13,7 +13,7 @@ This is super simple:
 
 ```
 composer require swiftotter/advanced-pricing-bug
-php bin/magento module:enable swiftotter/advanced-pricing-bug
+php bin/magento module:enable SwiftOtter_AdvancedPricingBug
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento setup:static-content:deploy
